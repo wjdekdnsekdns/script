@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+<form action="/account" method="get">
+    <img src="../js/img1.png" style="width:200px;height:200px;" alt="">
+    <br><br>
+    <button onclick="return false;"id="btnChange">이미지 변경하기</button>
+</form>
+    </div>
+    <script>
+        let isImgChage = false;
+        let btnChangeNode = document.querySelector("#btnChange");
+        // 이벤트 유형,함수, 캡처 여부(생략 가능)
+        btnChangeNode.addEventListener("click",changeImg,false);
+        btnChangeNode.addEventListener("mouseover",changeImg,false);
+        btnChangeNode.addEventListener("mouseout",changeImg,false);
+
+        function changeImg(){
+            let imgNode = document.querySelector("img");
+            if(isImgChage){
+                imgNode.src = "../js/img1.png"
+            }else{
+                imgNode.src = "../js/img2.png"
+            }
+            isImgChage = !isImgChage;
+        }
+    </script>
+</body>
+</html>

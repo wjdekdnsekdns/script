@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 300px;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            color: #000;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://picsum.photos/id/237/200/300" alt="">
+        <button onclick="showDetail()" class="btn">상세보기열기</button>
+        <br>
+        <div id="desc" style="display: none">
+            <h1>귀염뽀짝 강아지</h1>
+            <div>귀염 귀염</div>
+            <button onclick="hideDetail()">상세보기닫기</button>
+        </div>
+
+    </div>
+    <script>
+        // 함수 1
+        function showDetail() {
+            document.querySelector("#desc").style.display = "block";
+            document.querySelector(".btn").style.display = "none";
+        }
+        // 함수 2
+        function hideDetail(){
+            document.querySelector("#desc").style.display ="none";
+            document.querySelector(".btn").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

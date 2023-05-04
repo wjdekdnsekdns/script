@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const hi = function(){
+        return "반가워";
+    }
+    console.log(hi);
+    console.log(hi());
+    console.log("--------------------");
+
+    /*
+        화살표 함수를 사용할 때 리턴 키워드에 생략 여부
+         const hi2 = () =>{return "야 반가워"}
+         const hi2 = ()=> "야 반가워";
+         let sum = (a,b) => {return a + b}
+         let sum = (a,b) =>  a + b;
+    */
+    const hi2 = () =>{return "야 반가워"}
+    console.log(hi2);
+    console.log(hi2());
+
+    let sum = (a,b) =>  a + b;
+    console.log(sum(10,10));
+    
+</script>
+</body>
+</html>

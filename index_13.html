@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="f-comtainer">
+        <img src="../js/img1.png"style="width: 200px; height: 200px;" alt="">
+        <button onclick="changeImg(); return false;"> 이미지 변경하기</button>
+    </div>
+    <script>
+        function changeImg(){
+            let imageNode = document.querySelector("img");
+            console.log(imageNode);
+            imageNode.src = "../js/img2.png";
+        }
+        /**
+         * 위 코드에서 return false; 문장은
+         * 이벤트 발생 후 브라우저의 기본 동작을 막기 위해 사용됩니다
+         * 버튼 클릭 이벤트가 발생하면 changeImg() 함수를 실행합니다
+         * 그런데 만약 이벤트 핸들러에서 return false;
+         * 문장을 사용하지 않음면, 브라우저는 버튼 클릭 이벤트에 대해 기본 동작을
+         * 수행하게 됩니다
+         */
+    </script>
+</body>
+</html>

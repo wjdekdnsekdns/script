@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 사용자 정의 객체
+        // 관례상 객체를 대문자 표기해 준다
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        const personKim = new Person("킴",30,"male");
+        console.log(personKim);
+        console.log(personKim.name);
+    </script>
+    <script>
+        // 일반 함수에 형태
+        function calc(n1,n2){
+            return n1 + n2;
+        }
+        // 사용하는 모양
+        let result = calc(200,200);
+        console.log(result)
+    </script>
+ <script>
+    // 모던 자바 스크립트 객체 프로토 타입 
+    class Student {
+        constructor(name) {
+            this.name = name;
+        }
+        sayHi() {
+            alert(this.name);
+        }     
+    }
+    // 사용하는 모습 
+    let student = new Student("John");
+    student.sayHi();
+</script>
+</body>
+
+</html>

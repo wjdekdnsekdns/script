@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div>
+        <label for="">원래가격 : </label>
+        <input type="text"id="originPrice">원
+    </div>
+    <div>
+        <label for="">할인율 : </label>
+        <input type="text"id="rate">%
+    </div>
+    <button onclick="showPrice()">할인된 가격 계산</button>
+    <br>
+    <div id="showResult"></div>
+    <script>
+        
+        function showPrice(){
+            let originPrice = document.querySelector("#originPrice").value;
+            console.log(originPrice);
+            let rate = document.querySelector("#rate").value;
+            let calcPrice = originPrice * (rate/100);
+            let resultPrince = originPrice - calcPrice;
+
+            // 백틱 ``
+            // 숫자 + "문자" + 
+            document.querySelector("#showResult").innerHTML=`상품에 원래 가격은${originPrice} 이고, 할인율은 ${rate}% 입니다.
+             할인된 금액은 ${calcPrice} 원을 적용 하여 ${resultPrince}에 구매 가능 합니다 `;
+        }
+    </script>
+</body>
+</html>
